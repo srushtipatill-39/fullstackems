@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { href, useLocation } from 'react-router-dom'; 
+import { useLocation } from 'react-router-dom'; 
 import { dummyProfileData } from '../assets/assets';    
 import { CalendarIcon, ChevronRightIcon, DollarSignIcon, FileTextIcon, LayoutGridIcon, LogOutIcon, MenuIcon, SettingsIcon, UserIcon, XIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -42,7 +42,7 @@ const Sidebar = () => {
                 <div className='flex items-center gap-3'>
                  <UserIcon className='text-white size-7' />
                  <div>
-                    <p className='font-semibold text-[13px text-white tracking-wide'>Employee MS</p>
+                    <p className='font-semibold text-[13px] text-white tracking-wide'>Employee MS</p>
                     <p className='text-[11px] text-slate-500 font-medium'>Management System</p>
                    
                 </div>
@@ -83,7 +83,7 @@ const Sidebar = () => {
         {navItems.map((item)=>{
          const isActive = pathname.startsWith(item.href)
          return (
-            <Link key={item.name} to={item.href} className={`group flex items-center gap-3 px-3 py-2.5 rounded-md text-[13px] font-medium transition-all duration-150 relative ${isActive ? "bg-indigo-500/12 text-indigo-300" : "text-slate-300 hover:text-white hover::bg-white/4"}`}>
+            <Link key={item.name} to={item.href} className={`group flex items-center gap-3 px-3 py-2.5 rounded-md text-[13px] font-medium transition-all duration-150 relative ${isActive ? "bg-indigo-500/12 text-indigo-300" : "text-slate-300 hover:text-white hover:bg-white/4"}`}>
               {isActive && <div className='absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-5 rounded-r-full bg-indigo-500'/>}
               <item.icon className={`w-[17px] h-[17px] shrink-0 ${isActive ? "text-indigo-300" : "text-slate-400 group-hover:text-slate-300"}`}/>
               <span className='flex-1'>
