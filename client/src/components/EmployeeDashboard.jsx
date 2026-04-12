@@ -34,7 +34,7 @@ const EmployeeDashboard = ({ data }) => {
 
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap:5 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-8">
                 {cards.map((card, index) => (
                     <div key={index} className="card card-hover p-5 sm:p-6 relative overflow-hidden group flex items-center justify-between">
                         <div>
